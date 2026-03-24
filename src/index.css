@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 155 100% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 33%;
+
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 155 100% 21%;
+
+    --radius: 0.75rem;
+
+    --hero-gradient: linear-gradient(135deg, hsl(155 100% 21%) 0%, hsl(155 100% 10%) 100%);
+    --section-warm: 0 0% 98%;
+    --gold: 0 0% 10%;
+    --gold-foreground: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 155 100% 21%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 49 100% 50%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 155 100% 21%;
+
+    --font-display: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    font-family: var(--font-display);
+  }
+
+  :focus-visible {
+    outline: 4px solid #006B3F;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: #006B3F;
+    color: #FFFFFF;
+  }
+}
+
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-16 md:px-8 md:py-24 lg:px-16;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-6xl;
+  }
+
+  .gradient-primary {
+    background: var(--hero-gradient);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
